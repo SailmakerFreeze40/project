@@ -43,11 +43,11 @@ body {
   border: none;
   border-color: #ff3e79;
   background-color: #f0f0f0;
-  cursor: pointer; /* Меняем курсор на указатель при наведении */
-  display: flex; /* Включаем flexbox для центрирования картинки */
-  align-items: center; /* Центрируем картинку по вертикали */
-  justify-content: center; /* Центрируем картинку по горизонтали */
-  overflow: hidden; /* Обрезаем всё, что выходит за пределы круга */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .header__button--logo {
@@ -61,12 +61,15 @@ body {
   justify-content: center;
 }
 
+p {
+  margin: 0;
+}
 .header__button:active {
-  transform: scale(0.9); /* Уменьшение при нажатии */
+  transform: scale(0.9);
 }
 
 .header__button--logo:active {
-  transform: scale(0.9); /* Уменьшение при нажатии */
+  transform: scale(0.9);
 }
 
 .div-y__bold:before {
@@ -87,21 +90,43 @@ body {
 
 .div-p {
   display: flex;
-  width: 304px;
-  height: 40px;
-  top: 112px;
+  white-space: nowrap;
+  overflow: hidden;
+  overflow-x: scroll;
+  gap: 16px;
+  padding: 10px 16px;
+  scrollbar-width: none;
+  overflow-x: auto;
+  position: relative;
 }
 
-.div-p__p {
+.div-p::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px; /* ширина градиента */
+  height: 100%;
+  pointer-events: none; /* чтобы не мешал кликам */
+  background: linear-gradient(to right, transparent, #f8f8f8);
+  /* цвет подогнать под фон */
+}
+
+.div-p__li {
+  display: flex;
+  align-items: center;
   font-family: "TTlakes-Reg", sans-serif;
-  size: 16px;
+  font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.2px;
   color: #7e7e82;
   border: 2px solid black;
   border-color: #b8ffec;
   border-radius: 5px;
-  font-weight: 500;
+  white-space: nowrap;
+  padding-left: 15px;
+  padding-right: 15px;
+  background: #ffffff;
 }
 
 .header__menu {
@@ -112,9 +137,10 @@ body {
   padding-bottom: 15px;
 }
 
-.div-p__p--noborder {
+.div-p__li--noborder {
   border: none;
   flex-wrap: nowrap;
+  background: none;
 }
 
 .full {
@@ -160,4 +186,8 @@ body {
   width: 550px;
   height: 176px;
   top: 386px;
+}
+
+ul {
+  list-style-type: none;
 }
