@@ -31,9 +31,10 @@ body {
   line-height: 40px;
   letter-spacing: -0.6px;
   position: relative;
-  padding-left: 24px;
+  padding-left: 15px;
   background: #f8f8f8;
   width: 288px;
+  font-weight: 700;
 }
 
 .header__button {
@@ -48,6 +49,11 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  margin-top: 15px;
+}
+
+.tree {
+  margin-top: 15px;
 }
 
 .header__button--logo {
@@ -127,6 +133,7 @@ p {
   padding-left: 15px;
   padding-right: 15px;
   background: #ffffff;
+  margin: 0;
 }
 
 .header__menu {
@@ -155,27 +162,30 @@ p {
 
 .div-p__bio {
   font-family: "TTlakes-Reg", sans-serif;
-  size: 14px;
+  font-size: 14px;
   line-height: 18px;
   letter-spacing: 0.2px;
   color: #1b1c21;
   font-weight: 400;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .div-p__read {
   font-family: "TTlakes-Med", sans-serif;
   font-weight: 500;
-  size: 16px;
+  font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.2px;
-  padding-left: 24px;
+  padding-left: 53px;
   position: relative;
+  margin: 0;
 }
 
 .div-p__read:before {
   content: "";
   position: absolute;
-  left: 0;
+  left: 20px;
   top: 0;
   height: 20px;
   width: 20px;
@@ -183,11 +193,17 @@ p {
 }
 
 .full_img {
-  width: 550px;
+  width: 320px;
   height: 176px;
-  top: 386px;
+  margin: 0;
 }
 
 ul {
   list-style-type: none;
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  body {
+    background-color: green;
+  }
 }
