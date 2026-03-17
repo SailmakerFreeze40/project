@@ -52,7 +52,11 @@ body {
   margin-top: 15px;
 }
 
-.tree {
+.tree-1 {
+  margin-top: 15px;
+}
+
+.tree-2 {
   margin-top: 15px;
 }
 
@@ -202,8 +206,29 @@ ul {
   list-style-type: none;
 }
 
-@media (min-width: 320px) and (max-width: 768px) {
+@media (min-width: 760px) and (max-width: 1000px) {
   body {
-    background-color: green;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .tree-1 {
+    display: none;
+  }
+  .header__button--none {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1119px) {
+  .full {
+    width: 769px;
+    height: 416px;
+  }
+  .header__button-2 {
+    margin-left: 1%;
+  }
+  .header__button-3 {
+    margin-left: 225px;
   }
 }
