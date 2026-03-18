@@ -175,6 +175,14 @@ p {
   padding-right: 20px;
 }
 
+.text__extra {
+  display: none;
+}
+
+.text__extra-2 {
+  display: none;
+}
+
 .div-p__read {
   font-family: "TTlakes-Med", sans-serif;
   font-weight: 500;
@@ -206,11 +214,6 @@ ul {
   list-style-type: none;
 }
 
-@media (min-width: 760px) and (max-width: 1000px) {
-  body {
-  }
-}
-
 @media (min-width: 320px) and (max-width: 767px) {
   .tree-1 {
     display: none;
@@ -225,10 +228,34 @@ ul {
     width: 769px;
     height: 416px;
   }
+  .div-p {
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+  .div-p__li {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 10px;
+  }
+  .div-p__bio {
+    display: block;
+    width: 312px;
+  }
+  .text__extra {
+    display: block;
+    margin-top: 10px;
+  }
   .header__button-2 {
     margin-left: 1%;
   }
   .header__button-3 {
     margin-left: 225px;
+  }
+  .full_img {
+  }
+  .div-p__read {
+    display: block;
   }
 }
