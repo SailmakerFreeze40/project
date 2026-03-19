@@ -1,6 +1,6 @@
 @font-face {
   font-family: TTlakes-Reg;
-  src: url("./fonts/TTLakes/TTLakes-Regular.woff") format("woff");
+  src: url("TTLakes-Regular.woff") format("woff");
 }
 
 @font-face {
@@ -10,7 +10,7 @@
 
 @font-face {
   font-family: TTlakes-Bold;
-  src: url("./fonts/TTLakes/TTLakes-Bold.woff") format("woff");
+  src: url("./TTLakes-Bold.woff") format("woff");
 }
 
 body {
@@ -165,7 +165,7 @@ p {
 }
 
 .div-p__bio {
-  font-family: "TTlakes-Reg", sans-serif;
+  font-family: "TTlakes-Reg";
   font-size: 14px;
   line-height: 18px;
   letter-spacing: 0.2px;
@@ -225,12 +225,20 @@ ul {
 
 @media (min-width: 768px) and (max-width: 1119px) {
   .full {
+    display: flex;
+    flex-wrap: wrap;
     width: 769px;
     height: 416px;
   }
+  .div-p__read {
+    width: 100%;
+    order: 3;
+    margin-top: 20px;
+  }
   .div-p {
-    padding-top: 20px;
-    padding-bottom: 10px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    margin-left: 10px;
   }
   .div-p__li {
     padding-left: 15px;
@@ -241,21 +249,37 @@ ul {
   }
   .div-p__bio {
     display: block;
-    width: 312px;
+    width: 320px;
+    line-height: 20px;
   }
   .text__extra {
     display: block;
-    margin-top: 10px;
+    margin-top: 20px;
   }
   .header__button-2 {
     margin-left: 1%;
   }
+
   .header__button-3 {
     margin-left: 225px;
   }
   .full_img {
+    margin-left: 10px;
+    width: 360px;
+    height: auto;
+    order: 2;
+    padding-left: 20px;
   }
   .div-p__read {
+    display: block;
+    width: 100px;
+    margin: 0;
+    padding-bottom: 20px;
+  }
+  .div-y__bold {
+    margin-top: 30px;
+  }
+  .text__line1 {
     display: block;
   }
 }
