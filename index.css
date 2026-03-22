@@ -16,16 +16,11 @@
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 .div-y {
   display: inline-block;
-  width: 304px;
-  height: 40px;
-  top: 112px;
-}
-
-.div-p__read {
 }
 
 .div-y__bold {
@@ -34,7 +29,7 @@ body {
   line-height: 40px;
   letter-spacing: -0.6px;
   position: relative;
-  padding-left: 15px;
+  padding-left: 20px;
   background: #f8f8f8;
   width: 288px;
   font-weight: 700;
@@ -53,10 +48,6 @@ body {
   justify-content: center;
   overflow: hidden;
   margin-top: 15px;
-}
-
-.info {
-  display: flex;
 }
 
 .tree-1 {
@@ -108,15 +99,13 @@ p {
 
 .div-p {
   display: flex;
-  white-space: nowrap;
   overflow-x: auto;
   overflow-y: hidden;
-  gap: 16px;
-  padding: 10px 16px;
   scrollbar-width: none;
   overflow-x: auto;
   position: relative;
-  margin: 0;
+  height: 50px;
+  padding: 0;
 }
 
 .div-p::after {
@@ -124,11 +113,11 @@ p {
   position: absolute;
   top: 0;
   right: 0;
-  width: 50px; /* ширина градиента */
+  width: 50px; /* Ã‘Ë†ÃÂ¸Ã‘â‚¬ÃÂ¸ÃÂ½ÃÂ° ÃÂ³Ã‘â‚¬ÃÂ°ÃÂ´ÃÂ¸ÃÂµÃÂ½Ã‘â€šÃÂ° */
   height: 100%;
-  pointer-events: none; /* чтобы не мешал кликам */
+  pointer-events: none; /* Ã‘â€¡Ã‘â€šÃÂ¾ÃÂ±Ã‘â€¹ ÃÂ½ÃÂµ ÃÂ¼ÃÂµÃ‘Ë†ÃÂ°ÃÂ» ÃÂºÃÂ»ÃÂ¸ÃÂºÃÂ°ÃÂ¼ */
   background: linear-gradient(to right, transparent, #f8f8f8);
-  /* цвет подогнать под фон */
+  /* Ã‘â€ ÃÂ²ÃÂµÃ‘â€š ÃÂ¿ÃÂ¾ÃÂ´ÃÂ¾ÃÂ³ÃÂ½ÃÂ°Ã‘â€šÃ‘Å’ ÃÂ¿ÃÂ¾ÃÂ´ Ã‘â€žÃÂ¾ÃÂ½ */
 }
 
 .div-p__li {
@@ -136,6 +125,7 @@ p {
   align-items: center;
   font-family: "TTlakes-Reg", sans-serif;
   font-size: 16px;
+  height: 40px;
   line-height: 24px;
   letter-spacing: -0.2px;
   color: #7e7e82;
@@ -143,7 +133,7 @@ p {
   white-space: nowrap;
   padding-left: 15px;
   padding-right: 15px;
-  margin: 0;
+  margin-left: 20px;
   cursor: pointer;
   border: 2px solid transparent;
 }
@@ -163,9 +153,6 @@ p {
 .full {
   display: flex;
   align-items: stretch;
-  width: 320px;
-  height: 509px;
-  top: 88px;
   background-color: #f8f8f8;
   flex-wrap: wrap;
 }
@@ -183,12 +170,10 @@ p {
   padding-right: 20px;
   width: 300px;
 }
-
-.text__extra {
+.text__extra-2 {
   display: none;
 }
-
-.text__extra-2 {
+.text__extra-3 {
   display: none;
 }
 
@@ -198,10 +183,10 @@ p {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.2px;
-  padding-left: 53px;
   position: relative;
-  margin: 0;
+  margin: 15px;
   cursor: pointer;
+  padding-left: 20px;
 }
 .div-p__read:hover {
   opacity: 0.5;
@@ -210,7 +195,7 @@ p {
 .div-p__read:before {
   content: "";
   position: absolute;
-  left: 20px;
+  left: -10px;
   top: 0;
   height: 20px;
   width: 20px;
@@ -226,13 +211,33 @@ p {
 ul {
   list-style-type: none;
 }
+.status {
+  display: none;
+}
 
-@media (min-width: 320px) and (max-width: 767px) {
-  .tree-1 {
-    display: none;
+.tree-1 {
+  display: none;
+}
+
+.header__button--none {
+  display: none;
+}
+
+@media (min-width: 320px) {
+  .info {
+    display: flex;
   }
+
   .header__button--none {
-    display: none;
+    display: block;
+    padding: 0;
+  }
+  .header__button-3 {
+    margin-left: 170px;
+  }
+  .text__extra-2 {
+    display: block;
+    margin-top: 15px;
   }
 }
 
@@ -264,17 +269,11 @@ ul {
     width: 320px;
     line-height: 20px;
   }
-  .text__extra {
-    display: block;
-    margin-top: 20px;
-  }
+
   .header__button-2 {
     margin-left: 1%;
   }
 
-  .header__button-3 {
-    margin-left: 225px;
-  }
   .full_img {
     margin-left: 5px;
     width: 360px;
@@ -296,6 +295,25 @@ ul {
 }
 
 @media (min-width: 1120px) {
+  .statuso {
+    display: flex;
+  }
+  .text__extra-3 {
+    display: block;
+  }
+  .div-y__bold {
+    margin-top: 45px;
+  }
+  .statuso--rigth {
+    margin-left: auto;
+    margin-right: 50px;
+  }
+
+  .div-p {
+    flex-wrap: wrap;
+    height: auto;
+  }
+
   .header__menu {
     display: none;
   }
@@ -305,12 +323,11 @@ ul {
     justify-content: space-between;
   }
 
-  .popka {
+  .status {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 230px;
-    margin-top: 20px;
     gap: 8px;
   }
 
